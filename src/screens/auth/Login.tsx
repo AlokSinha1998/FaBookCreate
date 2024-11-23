@@ -78,12 +78,14 @@ const Login = (props: propType) => {
 
         >
         <View style={[AppStyle.commonAlignItems, AppStyle.commonJustifyContentCenter, {
-          marginVertical: 20,
+          marginVertical: 5,
           // height: initialState.firstTimeKey !== "" || initialState.checkClick ? height * 0.40 : height * 0.30,
           justifyContent: initialState.firstTimeKey !== "" || initialState.checkClick ? 'center' : 'space-evenly',
-          // backgroundColor:'pink',
+          flex:1,
         }]}>
-          <View style={[AppStyle.commonFlexDirectionRow, AppStyle.commonJustifyContentCenter, AppStyle.commonAlignItems]}>
+          <View style={[AppStyle.commonFlexDirectionRow, AppStyle.commonJustifyContentCenter, AppStyle.commonAlignItems,{
+            marginTop:50,
+          }]}>
             <Text style={[AppStyle.colorGrayDarkCode, AppStyle.fontSizeText18, AppStyle.robotoMedium]}>English (US)</Text>
             <AntDesign name='down' color={colors.grayCodeDarkColor} size={16} style={{
               marginLeft: 5,
@@ -92,7 +94,7 @@ const Login = (props: propType) => {
           <View>
             <Ionicons name='logo-facebook' color={colors.faceBookDarkBlue} size={width * 0.20} style={{
               // marginLeft:5,
-              marginTop: 15,
+              marginTop:initialState.firstTimeKey !== "" || initialState.checkClick ? 15:60,
             }} />
           </View>
           {(initialState.firstTimeKey !== "" || initialState.checkClick) && (<View style={[{
@@ -137,8 +139,7 @@ const Login = (props: propType) => {
 
             }]}>
             <View style={[{
-              // backgroundColor:'yellow',
-              // marginTop: initialState.firstTimeKey !== ""|| initialState.checkClick ?-height*0.12:0 ,
+              marginTop: initialState.firstTimeKey !== ""|| initialState.checkClick ?0:height*0.12 ,
             }]}>
 
             
